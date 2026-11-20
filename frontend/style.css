@@ -1,0 +1,45 @@
+/* Oculta elementos da tela quando a classe 'hidden' é aplicada via JS */
+.hidden {
+  display: none !important;
+}
+
+/* Estilização base das caixas de aviso (sucesso e erro) */
+.feedback {
+  padding: 1rem;
+  border-radius: var(--pico-border-radius);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.feedback.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+.feedback.error {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Ajusta o tamanho e as cores dos botões de ação dentro da tabela */
+td button {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  width: auto;
+  display: inline-block;
+}
+
+td button.warning {
+  background-color: #f59f00;
+  border-color: #f59f00;
+  color: #fff;
+}
+
+td button.danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}

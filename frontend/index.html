@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Usuários</title>
+   <!-- Carrega o estilo local do Pico.css e os ajustes personalizados -->
+  <link rel="stylesheet" href="pico.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header style="margin-bottom: 1.5rem;">
+      <h1>Gestão de Usuários</h1>
+      <p>Painel administrativo de cadastro e controle de acesso.</p>
+    </header>
+
+     <!-- Área de mensagens de feedback (sucesso/erro) e barra de carregamento -->
+    <div id="feedback" class="feedback hidden" role="alert"></div>
+    <div id="loading" class="loading-box hidden">
+      <progress></progress>
+      <small>Carregando dados...</small>
+    </div>
+
+    <!-- Formulário único utilizado tanto para cadastro quanto para edição -->
+    <article>
+      <header>
+        <strong id="form-title">Novo Usuário</strong>
+      </header>
+
+      <!-- Campo oculto que guarda o ID quando o formulário está em modo de edição -->
+      <form id="user-form">
+        <input type="hidden" id="user-id">
+
+        <div class="grid">
+          <label for="name">
+            Nome *
+            <input type="text" id="name" required minlength="3" placeholder="Ex: Maria Silva">
+          </label>
+
+          <label for="email">
+            E-mail *
+            <input type="email" id="email" required placeholder="Ex: maria@dominio.com">
+          </label>
+        </div>
+
+        <div class="grid">
+          <label for="login">
+            Login *
+            <input type="text" id="login" required minlength="3" placeholder="Ex: mariasilva">
+          </label>
+
+          <label for="password">
+            Senha <small id="password-hint">(mínimo 8 caracteres) *</small>
+            <input type="password" id="password" minlength="8" placeholder="********">
+          </label>
+        </div>
+
+        <label for="active" style="margin-bottom: 1.5rem;">
+          <input type="checkbox" id="active" role="switch" checked>
+          Usuário Ativo
+        </label>
+
+        <div class="grid">
+          <button type="submit" id="btn-save">Salvar Usuário</button>
+          <button type="button" id="btn-cancel" class="secondary hidden">Cancelar Edição</button>
+        </div>
+      </form>
+    </article>
+
+    <!-- Tabela de listagem de Usuários (Requisito 9) -->
+    <article>
+      <header>
+        <strong>Usuários Cadastrados</strong>
+      </header>
+
+      <div class="overflow-auto">
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Login</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="users-table-body">            
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
