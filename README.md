@@ -1,10 +1,10 @@
-# 👥 Sistema de Gestão de Usuários (CRUD Full-Stack)
+# Sistema de Gestão de Usuários (CRUD Full-Stack)
 
 Aplicação Full-Stack desenvolvida para o **Desafio Técnico DevPool**, contemplando uma API RESTful para gerenciamento de usuários com persistência em banco de dados relacional e uma interface web responsiva para consumo dos endpoints.
 
 ---
 
-## 🛠️ Tecnologias Escolhidas
+## Tecnologias Escolhidas
 
 * **Frontend:** HTML5, CSS3 (com [Pico.css](https://picocss.com) local para estilização responsiva) e JavaScript Puro (Vanilla JS utilizando Fetch API).
 * **Backend:** Node.js com framework Express.
@@ -13,7 +13,7 @@ Aplicação Full-Stack desenvolvida para o **Desafio Técnico DevPool**, contemp
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 desafio-devpool-crud/
@@ -39,7 +39,7 @@ desafio-devpool-crud/
 
 ---
 
-## 🚀 Como Instalar e Executar Localmente
+## Como Instalar e Executar Localmente
 
 ### Pré-requisitos
 * [Node.js](https://nodejs.org) (versão 18 ou superior) instalado na máquina.
@@ -69,7 +69,7 @@ desafio-devpool-crud/
 
 ---
 
-## 🔌 Documentação e Exemplos de Chamadas da API (cURL)
+## Documentação e Exemplos de Chamadas da API (cURL)
 
 A API responde no endereço base `http://localhost:3000`.
 
@@ -144,7 +144,7 @@ curl -X DELETE http://localhost:3000/users/1
 
 ---
 
-## 🔒 Decisões Técnicas e Regras de Negócio Aplicadas
+## Decisões Técnicas e Regras de Negócio Aplicadas
 
 * **Isolamento de Camadas:** O frontend nunca acessa diretamente o arquivo `.sqlite`; toda comunicação ocorre exclusivamente via requisições HTTP RESTful.
 * **Proteção de Credenciais:** As senhas são armazenadas utilizando hash `BCrypt` (salt 10) e a coluna `password` é explicitamente omitida em todas as consultas `SELECT` do repositório.
